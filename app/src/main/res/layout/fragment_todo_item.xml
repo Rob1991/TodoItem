@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    >
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/fragment_todo_item_btnSave"
+            android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/fragment_todo_item_checkBoxRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="84dp"
+            android:text="Repeat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_todo_item_checkBoxReminder" />
+
+        <EditText
+            android:id="@+id/fragment_todo_item_editTextTitle"
+            android:layout_width="343dp"
+            android:layout_height="59dp"
+
+            android:hint="title"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="108dp" />
+
+        <EditText
+            android:id="@+id/fragment_todo_item_editTextDescription"
+            android:layout_width="336dp"
+            android:layout_height="131dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="92dp"
+            android:hint="description"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_todo_item_editTextTitle" />
+
+        <EditText
+            android:id="@+id/fragment_todo_item_editTextDate"
+            android:layout_width="331dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:inputType="textPersonName|date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_todo_item_editTextDescription" />
+
+        <CheckBox
+            android:id="@+id/fragment_todo_item_checkBoxReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="84dp"
+            android:text="Reminder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_todo_item_editTextDate" />
+
+        <RadioGroup
+            android:layout_width="131dp"
+            android:layout_height="222dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_todo_item_checkBoxRepeat">
+
+            <RadioButton
+                android:id="@+id/fragment_todo_item_radioButtonDaily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Daily" />
+
+            <RadioButton
+                android:id="@+id/fragment_todo_item_radioButtonWeekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Weekly" />
+
+            <RadioButton
+                android:id="@+id/fragment_todo_item_radioButtonMonthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Monthly" />
+        </RadioGroup>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
